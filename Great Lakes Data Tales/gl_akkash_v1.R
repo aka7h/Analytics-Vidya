@@ -66,9 +66,9 @@ new_gl_test$Target.Clicks <- as.factor(new_gl_test$Target.Clicks)
 new_gl_test$SpecialDay <- as.factor(new_gl_test$SpecialDay)
 new_gl_test$Avg.Position <- as.factor(new_gl_test$Avg.Position)
 
-gl.prediction_3 <- predict(gl.train.model_3, newdata = new_gl_test)
+gl.prediction <- predict(gl.train.model_2, newdata = new_gl_test)
 summary(gl.prediction)
-mean(gl.prediction_3)
+mean(gl.prediction)
 
 submission <- data.frame(Day.Index = gl_test$Day.Index, Obtained.Leads= gl.prediction)
 
